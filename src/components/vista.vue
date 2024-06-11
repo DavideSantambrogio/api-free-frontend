@@ -17,11 +17,11 @@ export default {
 <template>
     <div class="row">
         <div class="col-3">
-            <category />
+            <category @filtered-posts="updatePosts" />
         </div>
 
         <div class="col-6">
-            <post />
+            <post :posts="filteredPosts" />
         </div>
 
         <div class="col-3">
